@@ -84,7 +84,7 @@ hr {
 #main_nav {
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
-  .name{
+  .name {
     font-weight: 700;
     font-size: .8em;
     letter-spacing: 4px;
@@ -97,10 +97,11 @@ hr {
   }
   nav {
     float: right;
+    padding-top: 1.5rem;
     a {
       color: $dark;
-      text-transform: none;
-      margin: 01rem;
+      text-decoration: none;
+      margin: 0 1rem;
       font-size: 1rem;
     }
   }

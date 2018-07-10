@@ -1,5 +1,32 @@
-<%= @post.title %> <br>
-<%= @post.content %> <br>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date"><%=@post.created_at.strftime('%A, %B %d') %></p>
+    <h1><%= @post.title %></h1>
+    <hr>
+  </header>
+  <div id="content">
+    <%= @post.content %>
+  </div>
+
+  <hr>
+
+  <div id="share_box">
+    <p>Share The Do list </p>
+
+    <!-- Twitter -->
+    <a onkeyup=""onclick="javascript:window.open('http://twitter.com/share?text= <%= @post.title %> by @angelm1015 - &amp;url=<%= url_for([@post, {only_path:false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fab fa-twitter"></i> </a>
+
+    <!-- Facebook -->
+    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u= <%= url_for([@post, {only_path:false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fab fa-facebook"></i> </a>
+
+    <!-- GooglePlus -->
+    <a onclick="javascript:window.open('https://plus.google.com/share?url= <%= url_for([@post, {only_path:false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fab fa-google-plus"></i> </a>
+
+  </div>
+
+  <hr>
+
+</div>
 
 <br>
 <br>
@@ -8,3 +35,11 @@
 <%= link_to "Delete", post_path(@post), method: :delete, data: {
   confirm: "Are you sure you want to delete this post?"
   } %>
+
+  <footer id="main_footer"></footer>
+  <p class"copyright">&copy;2018 Angel Melendez</p>
+  <nav class='cons'>
+    <a href="#"> <i class="fab fa-twitter"></i> </a>
+    <a href="#"> <i class="fab fa-github"></i> </a>
+    <a href="#"> <i class="fab fa-linkedin"></i> </a>
+  </nav>
