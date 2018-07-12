@@ -71,3 +71,5 @@ group :production do
 end
 
 gem "friendly_id", "~> 5.2"
+
+gem "will_paginate", "~> 3.1"
