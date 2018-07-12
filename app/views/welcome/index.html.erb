@@ -23,13 +23,12 @@
 
   <div class="col-3 homepage_content">
   <h2>I've Built</h2>
-  <hr>
-  <%= @posts.each do |post| %>
-    <div class="post">
-      <p class="date"><%=project.created_at.strftime('%A,%B %d')%></p>
+    <hr>
+  <%= @projects.each do |project| %>
       <h2><a href=""><%= link_to project.title, project %></a></h2>
-      <hr>
-    </div>
+      <p class="date"><%=project.created_at.strftime('%A,%B %d')%></p>
+    <hr>
+  </div>
   <% end %>
   </div>
 </div>
