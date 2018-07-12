@@ -75,3 +75,5 @@ gem "friendly_id", "~> 5.2"
 gem "will_paginate", "~> 3.1"
 
 gem "mail_form", "~> 1.7"
+
+gem "devise", "~> 4.4"
