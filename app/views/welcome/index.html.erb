@@ -24,11 +24,12 @@
   <div class="col-3 homepage_content">
   <h2>I've Built</h2>
   <hr>
-  <h3> Unicast</h3>
-  <p class="date"> // </p>
-  <h3> Angel's Community</h3>
-  <p class="date"> // </p>
-  <h3> 12 in 12 challenge</h3>
-  <p class="date"> // </p>
+  <%= @posts.each do |post| %>
+    <div class="post">
+      <p class="date"><%=project.created_at.strftime('%A,%B %d')%></p>
+      <h2><a href=""><%= link_to project.title, project %></a></h2>
+      <hr>
+    </div>
+  <% end %>
   </div>
 </div>
