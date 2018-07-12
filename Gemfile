@@ -69,3 +69,5 @@ group :production do
   gem 'pg', '1.0';
   gem 'rails_12factor'
 end
+
+gem "friendly_id", "~> 5.2"
